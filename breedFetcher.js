@@ -6,7 +6,7 @@ const fetchBreedDescription = function(breedName, callback) {
     if (!err) {
       const data = JSON.parse(body);
       if (body.length <= 2 || breedName !== data[0].name) {
-        callback(breedName);
+        callback(breedName,null);
       } else {
         callback(null,data[0].description);
       }
